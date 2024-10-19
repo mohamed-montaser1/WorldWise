@@ -8,8 +8,6 @@ import PageNotFound from "./pages/PageNotFound";
 function App() {
   return (
     <div>
-      {/* The p elements before and after the BrowserRouter element are static for all pages */}
-      <p>Static Content</p>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -18,7 +16,6 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-      <p>Another Static Content</p>
     </div>
   );
 }
