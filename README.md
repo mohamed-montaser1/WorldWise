@@ -1,8 +1,36 @@
-# React + Vite
+# (Link vs NavLink) React Router Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Link
 
-Currently, two official plugins are available:
+The Link component main purpose is to navigate between pages without refresh the page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### How It Works
+
+- It takes a `to` prop which is the path to the destination page.
+- It doesn't reload the page when navigating between pages.
+
+### Example
+
+```jsx
+import { Link } from "react-router-dom";
+export default function Home() {
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>This is the home page</p>
+      <Link to="/about">Go to About</Link>
+    </div>
+  );
+}
+```
+
+### NavLink
+
+It's the same as Link component but the difference is:
+
+- It gives the link element two props
+
+  - `aria-current`
+  - `class="active"`
+
+- so you can know the active link by selecting it using `active` class
