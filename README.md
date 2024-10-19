@@ -34,3 +34,20 @@ It's the same as Link component but the difference is:
   - `class="active"`
 
 - so you can know the active link by selecting it using `active` class
+
+### Example
+
+```jsx
+import { NavLink } from "react-router-dom";
+export default function Home() {
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>This is the home page</p>
+      <NavLink to="/about" activeClassName="active">
+        Go to About
+      </NavLink>
+    </div>
+  );
+}
+```
