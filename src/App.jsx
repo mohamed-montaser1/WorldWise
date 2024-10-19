@@ -6,13 +6,18 @@ import Pricing from "./pages/Pricing";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/pricing" element={<Pricing />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      {/* The p elements before and after the BrowserRouter element are static for all pages */}
+      <p>Static Content</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/pricing" element={<Pricing />} />
+        </Routes>
+      </BrowserRouter>
+      <p>Another Static Content</p>
+    </div>
   );
 }
 
